@@ -8,18 +8,26 @@ ventana.title("Calculadora")
 ventana.geometry("500x600")
 
 frame = ttk.Frame(ventana)
-#Tamaño del boton
+frame.pack()
+# Tamaño del boton
 frame['ancho'] = 500 
 frame['alto'] = 400
-#Distancias de la pantalla
+# Distancias de la pantalla
 frame['width'] = '500p'
-#Relleno
+# Relleno
 frame['espacio'] = 5                # 5 pixels on all sides
 frame['espacio'] = (5, 10)          # 5 on left and right, 10 on top and bottom    
 frame['espacio'] = (5, 7, 10, 12)   # left: 5, top: 7, right: 10, bottom: 12
-#borde
+# borde
 frame['borderwidth'] = 2
 frame['relief'] = 'sunken'
+# Etiqueta
+label = ttk.Label(parent, text='Full name:')
+# mostrar boton
+resultsContents = StringVar()
+label['textvariable'] = resultsContents
+resultsContents.set('Initial value to display')
+
 
 botones = [
     ("C", 0, 0), ("^", 0, 1), ("√", 0, 2), ("÷", 0, 3)
@@ -43,5 +51,4 @@ def exponente():
 def raiz():
     pass
 
-    
 ventana.mainloop()
