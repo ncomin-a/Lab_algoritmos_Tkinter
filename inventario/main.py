@@ -28,7 +28,7 @@ class InventarioApp:
         frame_izq = ttk.LabelFrame(root, text="Panel de Operaciones")
         frame_izq.place(x=10, y=10, width=300, height=480)
 
-        ttk.Label(frame_izq, text="Código").pack(pady=5)
+        ttk.Label(frame_izq, text="Producto").pack(pady=5)
         self.cod = ttk.Entry(frame_izq)
         self.cod.pack()
 
@@ -58,7 +58,7 @@ class InventarioApp:
         frame_der = ttk.LabelFrame(root, text="Inventario")
         frame_der.place(x=320, y=10, width=560, height=480)
 
-        columnas = ("codigo", "descripcion", "precio", "categoria", "cantidad")
+        columnas = ("producto", "descripcion", "precio", "categoria", "cantidad")
 
         self.tree = ttk.Treeview(frame_der, columns=columnas, show="headings")
 
